@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jcommon-1.0.16">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/jcommon-1.0.16.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
