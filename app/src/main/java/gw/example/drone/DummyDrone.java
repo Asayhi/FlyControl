@@ -1,5 +1,7 @@
 package gw.example.drone;
 
+import android.util.Log;
+
 import de.yadrone.base.ARDrone;
 import de.yadrone.base.IARDrone;
 import de.yadrone.base.command.CommandManager;
@@ -7,12 +9,9 @@ import de.yadrone.base.configuration.ConfigurationManager;
 import de.yadrone.base.navdata.NavDataManager;
 import de.yadrone.base.video.VideoManager;
 
-/**
- * Created by gotzwinterfeldt on 14.01.17.
- */
-public class DummyDrone implements IARDrone {
+public class dummyDrone implements IARDrone {
 
-    int newSpeed;
+
 
     @Override
     public CommandManager getCommandManager() {
@@ -36,11 +35,12 @@ public class DummyDrone implements IARDrone {
 
     @Override
     public void start() {
-
+        Log.e("Drone:","started");
     }
 
     @Override
     public void stop() {
+        Log.e("Drone","stopped");
 
     }
 
@@ -71,11 +71,12 @@ public class DummyDrone implements IARDrone {
 
     @Override
     public void landing() {
-
+        Log.d("Drone", "landing");
     }
 
     @Override
     public void takeOff() {
+        Log.e("Drone","take off");
 
     }
 
@@ -106,12 +107,12 @@ public class DummyDrone implements IARDrone {
 
     @Override
     public void up() {
-
+        Log.d("Drone:","UP");
     }
 
     @Override
     public void down() {
-
+        Log.d("Drone:","DOWN");
     }
 
     @Override
@@ -131,17 +132,18 @@ public class DummyDrone implements IARDrone {
 
     @Override
     public void hover() {
+        Log.d("Drone","hover");
 
     }
 
     @Override
     public int getSpeed() {
-        return newSpeed;
+        return 0;
     }
 
     @Override
     public void setSpeed(int speed) {
-        newSpeed=speed;
+
     }
 
     @Override

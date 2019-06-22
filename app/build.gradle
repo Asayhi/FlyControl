@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 18
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "gw.example.drone"
@@ -19,14 +19,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:18.0.0'
-    compile files('libs/commons-net-3.3.jar')
-    compile files('libs/core.jar')
-    compile files('libs/jcommon-1.0.16.jar')
-    compile files('libs/jfreechart-1.0.13.jar')
-    compile files('libs/slf4j-api-1.7.2.jar')
-    compile files('libs/slf4j-jdk14-1.7.2.jar')
+    api fileTree(dir: 'libs', include: ['*.jar'])
+     
     // Required -- JUnit 4 framework
-    testCompile 'junit:junit:4.12'
-    compile 'junit:junit:4.12'
 }
