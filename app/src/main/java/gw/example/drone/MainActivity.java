@@ -37,7 +37,7 @@ public class MainActivity extends Activity implements SensorEventListener{
 
     enum dStatus{fliegend,stehend};
     dStatus dstatus;
-    Button b;
+    Button inital;
     Button up;
     Button down;
     Button left;
@@ -47,10 +47,10 @@ public class MainActivity extends Activity implements SensorEventListener{
 
     /**
      * Called when activity is created
-     * <p>
-     *     Initailizes the sensorManager aswell as the Accelrometer
-     * </p>
-     * @param savedInstanceState
+     * Initailizes the sensorManager aswell as the accelerometer pbject
+     * and the drone object
+     *
+     * @param savedInstanceState A saved state of the instance
      */
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -69,11 +69,17 @@ public class MainActivity extends Activity implements SensorEventListener{
 
         dstatus = dStatus.stehend;
 
-        b = (Button) findViewById(R.id.button);
-        b.setOnClickListener(new View.OnClickListener() {
+        inital = (Button) findViewById(R.id.button);
+        inital.setOnClickListener(new View.OnClickListener() {
             /**
-             *
-             * @param v
+             * Method that awaits a click event and calls, depending on the current status of the drone
+             * the function for take of or the function for landing.
+             * <p>
+             *     It also sets the Text of the TextView viewStatus to the new State
+             *     and enables (when the drone takes off) or disables (when the drone lands) the usage of the
+             *     accelerometer for direction control
+             * </p>
+             * @param v The current view
              */
             @Override
             public void onClick(View v) {
@@ -82,14 +88,14 @@ public class MainActivity extends Activity implements SensorEventListener{
                     drone.takeOff();
                     dstatus = dStatus.fliegend;
                     viewStatus.setText("Flying");
-                    b.setText("Landing");
+                    inital.setText("Landing");
                     initFlag = true;
                 }
                 else{
                     drone.landing();
                     viewStatus.setText("Landing");
                     dstatus = dStatus.stehend;
-                    b.setText("Take Off");
+                    inital.setText("Take Off");
                     initFlag = false;
                 }
             }
