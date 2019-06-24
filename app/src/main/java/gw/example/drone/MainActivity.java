@@ -73,13 +73,13 @@ public class MainActivity extends Activity implements SensorEventListener{
         inital.setOnClickListener(new View.OnClickListener() {
             /**
              * Method that awaits a click event and calls, depending on the current status of the drone
-             * the function for take of or the function for landing.
+             * the function for take off or the function for landing.
              * <p>
              *     It also sets the Text of the TextView viewStatus to the new State
              *     and enables (when the drone takes off) or disables (when the drone lands) the usage of the
              *     accelerometer for direction control
              * </p>
-             * @param v The current view
+             * @param v View
              */
             @Override
             public void onClick(View v) {
@@ -104,10 +104,14 @@ public class MainActivity extends Activity implements SensorEventListener{
         up = (Button) findViewById(R.id.btn_up);
         up.setOnTouchListener(new View.OnTouchListener(){
             /**
-             *
-             * @param v
-             * @param event
-             * @return
+             * Method that implements an onTouchListener to enable the user to
+             * let the drone ascend.
+             * A listener awaits a touch event.
+             * On ACTION_DOWN the up-function of the drone is called
+             * On ACTION_UP the hover-function of the drone is called
+             * @param v View
+             * @param event MotionEvent
+             * @return bool to check on the method
              */
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -128,9 +132,13 @@ public class MainActivity extends Activity implements SensorEventListener{
         down = (Button) findViewById(R.id.btn_down);
         down.setOnTouchListener(new View.OnTouchListener(){
             /**
-             *
-             * @param v
-             * @param event
+             * Method that implements an onTouchListener to enable the user to
+             * let the drone descend.
+             * A listener awaits a touch event.
+             * On ACTION_DOWN the down-function of the drone is called
+             * On ACTION_UP the hover-function of the drone is called
+             * @param v View
+             * @param event MotionEvent
              * @return
              */
             @Override
@@ -152,9 +160,13 @@ public class MainActivity extends Activity implements SensorEventListener{
         left = (Button) findViewById(R.id.btn_left);
         left.setOnTouchListener(new View.OnTouchListener() {
             /**
-             *
-             * @param view
-             * @param event
+             * Method that implements an onTouchListener to enable the user to
+             * rotate the drone counter clock wise.
+             * A listener awaits a touch event.
+             * On ACTION_DOWN the spinLeft-function of the drone is called
+             * On ACTION_UP the hover-function of the drone is called
+             * @param view View
+             * @param event MotionEvent
              * @return
              */
             @Override
@@ -176,9 +188,13 @@ public class MainActivity extends Activity implements SensorEventListener{
         right = (Button) findViewById(R.id.btn_right);
         right.setOnTouchListener(new View.OnTouchListener() {
             /**
-             *
-             * @param view
-             * @param event
+             * Method that implements an onTouchListener to enable the user to
+             * rotate the drone clock wise.
+             * A listener awaits a touch event.
+             * On ACTION_DOWN the spinRight-function of the drone is called
+             * On ACTION_UP the hover-function of the drone is called
+             * @param view View
+             * @param event View
              * @return
              */
             @Override
@@ -221,12 +237,12 @@ public class MainActivity extends Activity implements SensorEventListener{
                 if (initFlag) {
 
                     if (x < 8.5 && x > 0) {       /**detect rotation around horizontal */
-                        if (z > 1) {
+                        if (z > 2) {
                             drone.forward();
                             viewStatus.setText("Forwards");
                             resetFlag = true;
                         }
-                        if (z < -1) {
+                        if (z < -2) {
                             drone.backward();
                             viewStatus.setText("Backwards");
                             resetFlag = true;
