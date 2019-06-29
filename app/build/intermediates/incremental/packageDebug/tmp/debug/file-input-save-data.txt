@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Fri Jun 21 21:08:39 CEST 2019
+#Tue Jun 25 20:03:17 CEST 2019
 0.baseType=DIRECTORY
-0.base=D\:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.base=D\:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 0.path=classes.dex
 0.set=DEX
 count=1

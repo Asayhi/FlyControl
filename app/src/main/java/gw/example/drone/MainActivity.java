@@ -21,19 +21,15 @@ import de.yadrone.base.ARDrone;
 import de.yadrone.base.IARDrone;
 import de.yadrone.base.navdata.*;
 
+import gw.example.drone.Accelerometer;
 
 
-public class MainActivity extends Activity implements SensorEventListener{
+
+public class MainActivity extends Activity{
 
     IARDrone drone;
 
-
-    private SensorManager senSensorManager;
-    private Sensor senAccelerometer;
-
-    private long lastUpdate = 0;
-    private boolean resetFlag = false;
-    private boolean initFlag = false;
+    Accelerometer senAccelerometer;
 
     enum dStatus{fliegend,stehend};
     dStatus dstatus;
@@ -47,8 +43,10 @@ public class MainActivity extends Activity implements SensorEventListener{
 
     /**
      * Called when activity is created
-     * Initailizes the sensorManager aswell as the accelerometer pbject
-     * and the drone object
+     * <p>
+     * Creates new instances of a drone object and an accelerometer object.
+     * Initializes the startup sequence of the drone.
+     *
      *
      * @param savedInstanceState A saved state of the instance
      */
@@ -58,11 +56,8 @@ public class MainActivity extends Activity implements SensorEventListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_GAME);
-
-        drone  = new dummyDrone();
+        drone  = new ARDrone();
+        senAccelerometer = new Accelerometer();
         drone.start();
 
         viewStatus = (TextView) findViewById(R.id.viewStatus);
@@ -71,6 +66,7 @@ public class MainActivity extends Activity implements SensorEventListener{
 
         inital = (Button) findViewById(R.id.button);
         inital.setOnClickListener(new View.OnClickListener() {
+
             /**
              * Method that awaits a click event and calls, depending on the current status of the drone
              * the function for take off or the function for landing.
@@ -89,14 +85,14 @@ public class MainActivity extends Activity implements SensorEventListener{
                     dstatus = dStatus.fliegend;
                     viewStatus.setText("Flying");
                     inital.setText("Landing");
-                    initFlag = true;
+                    senAccelerometer.initSenControl(MainActivity.this, drone, viewStatus);
                 }
                 else{
                     drone.landing();
                     viewStatus.setText("Landing");
                     dstatus = dStatus.stehend;
                     inital.setText("Take Off");
-                    initFlag = false;
+                    senAccelerometer.disableSenControl();
                 }
             }
         });
@@ -216,84 +212,11 @@ public class MainActivity extends Activity implements SensorEventListener{
 
     }
 
-    /**
-     * Methode that gets called when the sensor receives a new set of values
-     * @param sensorEvent
-     */
-    @Override
-    public void onSensorChanged(SensorEvent sensorEvent){
-        Sensor mySensor = sensorEvent.sensor;
-
-        if (mySensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            float x = sensorEvent.values[0];
-            float y = sensorEvent.values[1];
-            float z = sensorEvent.values[2];
-
-            long curTime = System.currentTimeMillis();
-
-            if ((curTime - lastUpdate) > 100){
-                lastUpdate = curTime;
-
-                if (initFlag) {
-
-                    if (x < 8.5 && x > 0) {       /**detect rotation around horizontal */
-                        if (z > 2) {
-                            drone.forward();
-                            viewStatus.setText("Forwards");
-                            resetFlag = true;
-                        }
-                        if (z < -2) {
-                            drone.backward();
-                            viewStatus.setText("Backwards");
-                            resetFlag = true;
-                        }
-                    } else if (y < -1) {
-                        drone.goLeft();
-                        viewStatus.setText("Going Left");
-                        resetFlag = true;
-                    } else if (y > 1) {
-                        drone.goRight();
-                        viewStatus.setText("Going Right");
-                        resetFlag = true;
-                    } else {
-                        if (resetFlag) {
-                            drone.hover();
-                            viewStatus.setText("Hovering");
-                            resetFlag = false;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy){
-
-    }
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
-
-    /**
-     * Method that gets called on pause of the activity
-     * It unregisters the listener of the sensor manager
-     */
-    protected  void onPause() {
-        super.onPause();
-        senSensorManager.unregisterListener(this);
-    }
-
-    protected void onResume() {
-        super.onResume();
-        senSensorManager.registerListener(this, senAccelerometer, SensorManager.SENSOR_DELAY_GAME);
     }
 
 }
