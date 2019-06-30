@@ -3,6 +3,7 @@ package gw.example.drone;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -41,7 +42,6 @@ public class MainActivity extends Activity{
     Button left;
     Button right;
     TextView viewStatus;
-
 
     /**
      * Called when activity is created
