@@ -34,6 +34,9 @@ public class Accelerometer implements SensorEventListener {
 
 
     /**
+     * Standard constructor of the Accelerometer-Class
+     * <p>
+     * Initializes the Accelerometer with default values.
      *
      */
     public Accelerometer(){
@@ -46,7 +49,27 @@ public class Accelerometer implements SensorEventListener {
         accel_x2 = 0;
         accel_yLeft = -2;
         accel_yRight = 2;
+    }
 
+    /**
+     * Customizable constructor of the Accelerometer-Class
+     * @param zBackward
+     * @param zForward
+     * @param x1
+     * @param x2
+     * @param yLeft
+     * @param yRight
+     */
+    public Accelerometer(double zBackward, double zForward, double x1, double x2, double yLeft, double yRight){
+        lastUpdate = 0;
+        initFlag = false;
+        resetFlag = false;
+        accel_zBackward = zBackward;
+        accel_zForward = zForward;
+        accel_x1 = x1;
+        accel_x2 = x2;
+        accel_yLeft = yLeft;
+        accel_yRight = yRight;
 
     }
 

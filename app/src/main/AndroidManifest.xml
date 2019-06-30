@@ -17,6 +17,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+        <activity android:name=".DroneSettings"></activity>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
@@ -24,7 +25,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="gw.example.drone.MainActivity"
-                tools:replace="android:value"/>
+                tools:replace="android:value" />
         </activity>
         <activity
             android:name=".MainActivity"

@@ -194,6 +194,7 @@ public class MainActivity extends Activity{
      */
 
     public void btnInitial_onClick (View v) {
+        inital = (Button) findViewById(R.id.btn_initial);
         if(dstatus == dStatus.stehend) {
 
             drone.takeOff();
