@@ -2,11 +2,13 @@ package gw.example.drone;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -64,39 +66,6 @@ public class MainActivity extends Activity{
 
         dstatus = dStatus.stehend;
 
-        inital = (Button) findViewById(R.id.button);
-        inital.setOnClickListener(new View.OnClickListener() {
-
-            /**
-             * Method that awaits a click event and calls, depending on the current status of the drone
-             * the function for take off or the function for landing.
-             * <p>
-             *     It also sets the Text of the TextView viewStatus to the new State
-             *     and enables (when the drone takes off) or disables (when the drone lands) the usage of the
-             *     accelerometer for direction control
-             * </p>
-             * @param v View
-             */
-            @Override
-            public void onClick(View v) {
-                if(dstatus == dStatus.stehend) {
-
-                    drone.takeOff();
-                    dstatus = dStatus.fliegend;
-                    viewStatus.setText("Flying");
-                    inital.setText("Landing");
-                    senAccelerometer.initSenControl(MainActivity.this, drone, viewStatus);
-                }
-                else{
-                    drone.landing();
-                    viewStatus.setText("Landing");
-                    dstatus = dStatus.stehend;
-                    inital.setText("Take Off");
-                    senAccelerometer.disableSenControl();
-                }
-            }
-        });
-
         up = (Button) findViewById(R.id.btn_up);
         up.setOnTouchListener(new View.OnTouchListener(){
             /**
@@ -114,11 +83,11 @@ public class MainActivity extends Activity{
                 switch (event.getAction()){
                     case MotionEvent.ACTION_DOWN:
                         drone.up();
-                        viewStatus.setText("Ascending");
+                        viewStatus.setText(R.string.tv_Ascending);
                         break;
                     case MotionEvent.ACTION_UP:
                         drone.hover();
-                        viewStatus.setText("Hovering");
+                        viewStatus.setText(R.string.tv_Hovering);
                         break;
                 }
                 return true;
@@ -142,11 +111,11 @@ public class MainActivity extends Activity{
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         drone.down();
-                        viewStatus.setText("Descending");
+                        viewStatus.setText(R.string.tv_Descending);
                         break;
                     case MotionEvent.ACTION_UP:
                         drone.hover();
-                        viewStatus.setText("Hovering");
+                        viewStatus.setText(R.string.tv_Hovering);
                         break;
                 }
                 return true;
@@ -170,11 +139,11 @@ public class MainActivity extends Activity{
                 switch (event.getAction()){
                     case MotionEvent.ACTION_DOWN:
                         drone.spinLeft();
-                        viewStatus.setText("Spinning Left");
+                        viewStatus.setText(R.string.tv_spinLeft);
                         break;
                     case MotionEvent.ACTION_UP:
                         drone.hover();
-                        viewStatus.setText("Hovering");
+                        viewStatus.setText(R.string.tv_Hovering);
                         break;
                 }
                 return true;
@@ -198,11 +167,11 @@ public class MainActivity extends Activity{
                 switch (event.getAction()){
                     case MotionEvent.ACTION_DOWN:
                         drone.spinRight();
-                        viewStatus.setText("Spinning Right");
+                        viewStatus.setText(R.string.tv_spinRight);
                         break;
                     case MotionEvent.ACTION_UP:
                         drone.hover();
-                        viewStatus.setText("Hovering");
+                        viewStatus.setText(R.string.tv_Hovering);
                         break;
                 }
                 return true;
@@ -212,11 +181,51 @@ public class MainActivity extends Activity{
 
     }
 
+
+    /**
+     * Method that awaits a click event and calls, depending on the current status of the drone
+     * the function for take off or the function for landing.
+     * <p>
+     *     It also sets the Text of the TextView viewStatus to the new State
+     *     and enables (when the drone takes off) or disables (when the drone lands) the usage of the
+     *     accelerometer for direction control
+     * </p>
+     * @param v View
+     */
+
+    public void btnInitial_onClick (View v) {
+        if(dstatus == dStatus.stehend) {
+
+            drone.takeOff();
+            dstatus = dStatus.fliegend;
+            viewStatus.setText(R.string.tv_Flying);
+            inital.setText(R.string.btn_Landing);
+            senAccelerometer.initSenControl(MainActivity.this, drone, viewStatus);
+        }
+        else{
+            drone.landing();
+            viewStatus.setText(R.string.tv_Landing);
+            dstatus = dStatus.stehend;
+            inital.setText(R.string.btn_Initial);
+            senAccelerometer.disableSenControl();
+        }
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        if(item.getItemId() == R.id.settings){
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

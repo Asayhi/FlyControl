@@ -9,7 +9,7 @@ import de.yadrone.base.configuration.ConfigurationManager;
 import de.yadrone.base.navdata.NavDataManager;
 import de.yadrone.base.video.VideoManager;
 
-public class dummyDrone implements IARDrone {
+public class DummyDrone implements IARDrone {
 
 
 

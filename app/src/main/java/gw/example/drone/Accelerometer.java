@@ -98,26 +98,26 @@ public class Accelerometer implements SensorEventListener {
                     if (x < accel_x1 && x > accel_x2) {       /**detect rotation around horizontal */
                         if (z > accel_zForward) {
                             drone.forward();
-                            viewStatus.setText("Forwards");
+                            viewStatus.setText(R.string.tv_Forwards);
                             resetFlag = true;
                         }
                         if (z < accel_zBackward) {
                             drone.backward();
-                            viewStatus.setText("Backwards");
+                            viewStatus.setText(R.string.tv_Backwards);
                             resetFlag = true;
                         }
                     } else if (y < accel_yLeft) {
                         drone.goLeft();
-                        viewStatus.setText("Going Left");
+                        viewStatus.setText(R.string.tv_Left);
                         resetFlag = true;
                     } else if (y > accel_yRight) {
                         drone.goRight();
-                        viewStatus.setText("Going Right");
+                        viewStatus.setText(R.string.tv_Right);
                         resetFlag = true;
                     } else {
                         if (resetFlag) {
                             drone.hover();
-                            viewStatus.setText("Hovering");
+                            viewStatus.setText(R.string.tv_Hovering);
                             resetFlag = false;
                         }
                     }
