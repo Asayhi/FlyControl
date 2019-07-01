@@ -1,2 +1,2 @@
 # FlyControll
-An Android app to controll Patriot drones
+An Android app to controll Parrot drones
