@@ -549,7 +549,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -600,13 +600,11 @@ public final class R {
     public static final int spread_inside=0x7f04001b;
     public static final int standard=0x7f04001c;
     public static final int start=0x7f04001d;
-    public static final int textView4=0x7f04001e;
-    public static final int textView5=0x7f04001f;
-    public static final int top=0x7f040020;
-    public static final int tv_Altitude=0x7f040021;
-    public static final int tv_Speed=0x7f040022;
-    public static final int viewStatus=0x7f040023;
-    public static final int wrap=0x7f040024;
+    public static final int top=0x7f04001e;
+    public static final int tv_Altitude=0x7f04001f;
+    public static final int tv_Speed=0x7f040020;
+    public static final int viewStatus=0x7f040021;
+    public static final int wrap=0x7f040022;
   }
   public static final class layout {
     public static final int activity_drone_settings=0x7f050000;
@@ -1659,7 +1657,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

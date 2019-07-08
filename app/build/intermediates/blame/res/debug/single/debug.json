@@ -1,94 +1,90 @@
 [
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_drone_settings.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\layout\\activity_drone_settings.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_drone_settings.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-xhdpi\\ic_drone_settings.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_wifi_setting.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-hdpi\\ic_wifi_setting.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_wifi_setting.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-xhdpi\\ic_wifi_setting.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\xml_pref_headers.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\xml\\pref_headers.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_wifi_setting.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-xxhdpi\\ic_wifi_setting.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_info_black_24dp.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable\\ic_info_black_24dp.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\xml_pref_headers.xml.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\xml\\pref_headers.xml"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_drone_settings.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-xhdpi\\ic_drone_settings.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_wifi_setting.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-anydpi\\ic_wifi_setting.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_drone_settings.xml.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-anydpi\\ic_drone_settings.xml"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sync_black_24dp.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable\\ic_sync_black_24dp.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_wifi_setting.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-mdpi\\ic_wifi_setting.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_wifi_setting.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-mdpi\\ic_wifi_setting.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_drone_settings.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-hdpi\\ic_drone_settings.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sync_black_24dp.xml.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable\\ic_sync_black_24dp.xml"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_drone_settings.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-mdpi\\ic_drone_settings.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_drone_settings.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-xxhdpi\\ic_drone_settings.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_drone_settings.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-anydpi\\ic_drone_settings.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_drone_settings.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-xxhdpi\\ic_drone_settings.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_drone_settings.xml.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\layout\\activity_drone_settings.xml"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\menu\\main.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\xml_pref_general.xml.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\xml\\pref_general.xml"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\xml_pref_general.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\xml\\pref_general.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_wifi_setting.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-hdpi\\ic_wifi_setting.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_drone_settings.xml.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\layout-land\\activity_drone_settings.xml"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_drone_settings.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-mdpi\\ic_drone_settings.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_wifi_setting.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-xxhdpi\\ic_wifi_setting.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_wifi_setting.xml.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-anydpi\\ic_wifi_setting.xml"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_drone_settings.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-hdpi\\ic_drone_settings.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_wifi_setting.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-xhdpi\\ic_wifi_setting.png"
-    },
-    {
-        "merged": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher.png.flat",
-        "source": "I:\\Programming\\AndroidProgramming\\flyMov\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+        "merged": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_info_black_24dp.xml.flat",
+        "source": "D:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\src\\main\\res\\drawable\\ic_info_black_24dp.xml"
     }
 ]

@@ -13,6 +13,9 @@ import de.yadrone.base.IARDrone;
 import de.yadrone.base.navdata.*;
 
 /**
+ * A SensorEventListener that is specifically designed for use with the accelerometersensor.
+ * Accelerometerobjects can be created, SensorListening initiatedd and orientation can be queried.
+ *
  *
  */
 public class Accelerometer implements SensorEventListener {
@@ -53,12 +56,12 @@ public class Accelerometer implements SensorEventListener {
 
     /**
      * Customizable constructor of the Accelerometer-Class
-     * @param zBackward
-     * @param zForward
-     * @param x1
-     * @param x2
-     * @param yLeft
-     * @param yRight
+     * @param zBackward float-Value for the acceleration along z axis needed to trigger the backwards-command
+     * @param zForward float-Value for the acceleration along z axis needed to trigger the forwards-command
+     * @param x1 float-Value for the acceleration along x axis needed to trigger comparision of z-accel
+     * @param x2 float-Value for the acceleration along x axis needed to trigger comparison of z-accel
+     * @param yLeft float-Value for the acceleration along y axis needed to trigger the left-command
+     * @param yRight float-Value for the acceleration along y axis needed to trigger the right-command
      */
     public Accelerometer(double zBackward, double zForward, double x1, double x2, double yLeft, double yRight){
         lastUpdate = 0;
@@ -75,10 +78,13 @@ public class Accelerometer implements SensorEventListener {
 
 
     /**
+     * Method that is called to enable the Accelerometer-object to act as a listener for the
+     * accerometer sensor and hand over important objects from the main activity for use in this
+     * class.
      *
-     * @param senContext
-     * @param foreignDrone
-     * @param status
+     * @param senContext The cotnext of the main activity
+     * @param foreignDrone The IARDrone object that was initialised in the main activity
+     * @param status The TextView status that show the curretn state of the drone
      */
     public void initSenControl(Context senContext, IARDrone foreignDrone, TextView status){
         accelContext = senContext;
@@ -92,15 +98,20 @@ public class Accelerometer implements SensorEventListener {
     }
 
     /**
-     *
+     * A method that stops the sensor from interfering with the drone or textView object
      */
     public void disableSenControl() {
         initFlag = false;
     }
 
     /**
-     * Methode that gets called when the sensor receives a new set of values
-     * @param sensorEvent
+     * Methode that gets called when the sensor receives a new set of value.
+     * On a change of the sensors state it retrieves a new set of values, which are
+     * used to first determine the orientation of the device around its x axis.
+     * A further comparison of the z-value determines if the device is leaned back or forwards
+     * If the x vlaue does not trigger the comparison the y values are evaluated to determine if the
+     * device is leaned lef or right
+     * @param sensorEvent A sensor event
      */
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {

@@ -27,7 +27,13 @@ import de.yadrone.base.navdata.*;
 import gw.example.drone.Accelerometer;
 
 
-
+/**
+ * Class that implements the main part of the user interface and handles the setup of all the
+ * important objects. It handles all the onClick and onTouch events of the main UI and also creates
+ * the option bar with the s
+ * @author Amesberger
+ * @version 0.2.4
+ */
 public class MainActivity extends Activity{
 
     IARDrone drone;
