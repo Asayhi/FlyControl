@@ -1,4 +1,4 @@
-#Tue Jul 02 19:16:15 CEST 2019
+#Tue Jul 09 13:46:26 CEST 2019
 base.0=D\:\\Programming\\mobileProgrammierung\\DroneControll\\ArDrone_new\\ArDrone\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 path.0=classes.dex
 renamed.0=classes.dex

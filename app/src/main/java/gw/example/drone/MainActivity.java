@@ -52,8 +52,7 @@ public class MainActivity extends Activity{
     /**
      * Called when activity is created
      * <p>
-     * Creates new instances of a drone object and an accelerometer object.
-     * Initializes the startup sequence of the drone.
+     * Creates the Accelerometer object
      *
      *
      * @param savedInstanceState A saved state of the instance
@@ -63,9 +62,23 @@ public class MainActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        drone  = new ARDrone();
         senAccelerometer = new Accelerometer();
+    }
+
+    /**
+     * Called on resume of the activity
+     * <p>
+     *     Initializes the startup sequence of the drone.
+     * </p>
+     *
+     * <p>
+     *     Initializes the onTouch and onClick methods for the buttons
+     * </p>
+     */
+    protected void onResume(){
+        super.onResume();
+        setContentView(R.layout.activity_main);
+        drone  = new ARDrone();
         drone.start();
 
         viewStatus = (TextView) findViewById(R.id.viewStatus);
@@ -216,8 +229,9 @@ public class MainActivity extends Activity{
             inital.setText(R.string.btn_Initial);
             senAccelerometer.disableSenControl();
         }
-    }
 
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
